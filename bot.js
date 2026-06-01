@@ -4,7 +4,7 @@ const mineflayer = require('mineflayer');
 const bot = mineflayer.createBot({
   host: 'xkindomsmp.aternos.me',       // Replace with the server IP (e.g., 'my-server.aternos.me')
   port: 61913,                  // Replace with your server port (Default is 25565)
-  username: 'TermuxBot',        // The in-game name for your bot
+  username: 'ManuthBot',        // The in-game name for your bot
   auth: 'offline',              // Use 'offline' for cracked/non-premium servers, or 'microsoft' for official accounts
   version: '1.20.1'             // Set your server's exact Minecraft version
 });
@@ -37,18 +37,5 @@ bot.on('end', () => {
 // Error handling to prevent crashes
 bot.on('error', (err) => console.log('Error encountered: ', err));
 bot.on('kicked', (reason) => console.log('Kicked from server: ', reason));
-
-const mineflayer = require('mineflayer');
-const http = require('http');
-
-// This keeps Render alive
-http.createServer((req, res) => res.end('Bot is running!')).listen(8080);
-
-// Your Mineflayer bot setup
-const bot = mineflayer.createBot({
-  host: 'xkindomsmp.aternos.me', // Change this
-  username: 'TermuxBot',
-  version: '1.20.1'       // Change to your server version
-});
 
 // Add your bot logic here
